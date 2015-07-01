@@ -1,7 +1,7 @@
 package Model;
 
 public class Handler {
-	public void crearLuchador(Utils tipo)
+	public Luchador crearLuchador(Utils tipo)
 	{
 		FabLuchador fl=null;
 		Luchador l=null;
@@ -17,5 +17,7 @@ public class Handler {
 				l=new Arquero(fl);
 				break;
 		}
+		
+		return l;
 	}
 }

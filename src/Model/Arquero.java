@@ -11,9 +11,6 @@ public class Arquero extends Luchador{
 	public void setear() {
 		this.arma=fb.ponerArma();
 		this.arm=fb.ponerArmadura();
-		System.out.println("Arquero");
-		System.out.println(arma);
-		System.out.println(arm);
 	}
 
 }
