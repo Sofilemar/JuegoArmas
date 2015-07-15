@@ -1,17 +1,9 @@
 package Model;
 
-public class EstrategiaCercano implements EstrategiaAtaque{
+public class EstrategiaCercano extends EstrategiaAtaque{
 
-	@Override
-	public void atacar(Luchador l) {
-		int vidaR=l.vida-20;
-		l.vida=vidaR;
-		System.out.println(vidaR);
+	public void setArma(Luchador atacante){
+		atacante.cambiarArma(TipoArma.CERCANIA);
 	}
 
-	@Override
-	public void recargar() {
-		System.out.println("Recargé");
-	}
-	
 }

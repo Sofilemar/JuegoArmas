@@ -8,6 +8,10 @@ public class Arco extends Arma{
 	}
 	public String toString()
 	{
-		return "ARMA: Arco: " +nombre + " " + daño;
+		return "arco: " +nombre;
+	}
+	@Override
+	public int getDaño() {
+		return 3;
 	}
 }

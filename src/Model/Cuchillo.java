@@ -1,17 +1,18 @@
 package Model;
 
-public class Espada extends Arma {
+public class Cuchillo extends Arma{
 
-	public Espada(int daño, String nombre) {
+	public Cuchillo(int daño, String nombre) {
 		super(daño, nombre);
 		// TODO Auto-generated constructor stub
 	}
 	public String toString()
 	{
-		return "espada: " +nombre;
+		return "cuchillo: " +nombre;
 	}
 	@Override
 	public int getDaño() {
-		return 3;
+		return 1;
 	}
+
 }

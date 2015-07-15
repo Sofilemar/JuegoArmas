@@ -1,17 +1,8 @@
 package Model;
 
-public class EstrategiaDistante implements EstrategiaAtaque{
+public class EstrategiaDistante extends EstrategiaAtaque{
 
-	@Override
-	public void atacar(Luchador l) {
-		int vidaR=l.vida-10;
-		l.vida=vidaR;
-		System.out.println(vidaR);
+	public void setArma(Luchador atacante){
+		atacante.cambiarArma(TipoArma.DISTANCIA);
 	}
-
-	@Override
-	public void recargar() {
-		System.out.println("Recargé");
-	}
-
 }

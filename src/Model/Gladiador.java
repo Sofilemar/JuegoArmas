@@ -1,5 +1,7 @@
 package Model;
 
+import java.util.HashMap;
+
 public class Gladiador extends Luchador {
 
 	
@@ -10,8 +12,19 @@ public class Gladiador extends Luchador {
 
 	@Override
 	protected void setear() {
-		this.arma=fb.ponerArma();
+		armasDisponibles.put(TipoArma.CERCANIA, fb.ponerArmaCercana());
+		armasDisponibles.put(TipoArma.DISTANCIA, fb.ponerArmaLejana());
+		this.arma= armasDisponibles.get(TipoArma.CERCANIA);
 		this.arm= fb.ponerArmadura();
 	}
 
+	@Override
+	public void cambiarArma(TipoArma obj) {
+		this.arma=armasDisponibles.get(obj);	
+	}
+
+	public String toString()
+	{
+		return "Gladiador" ;
+	}
 }

@@ -10,4 +10,10 @@ public abstract class Arma {
 		this.daño = daño;
 		this.nombre = nombre;
 	}
+
+	public abstract int getDaño();
+
+	public String getNombre() {
+		return nombre;
+	}
 }
